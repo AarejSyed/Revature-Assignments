@@ -1,0 +1,113 @@
+<!--
+Personal Portfolio Webpage Challenge: Create a website in HTML/CSS that acts as a resume / personal portfolio
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aarej Syed's personal portfolio">
+        <meta name="author" content="Aarej Syed">
+        <link rel="stylesheet" href="styles.css">
+        <title>Aarej Syed's Personal Portfolio</title>
+    </head>
+    <body>
+        <section class="block" id="header">
+            <h1>Aarej Syed</h1>
+        </section>
+
+        <section class="block" id="about">
+            <span>
+                <h2>About Me</h2>
+                <p>I am a Computer Science graduate from The University of Texas at Dallas with experience spanning full-stack web development, machine learning research, high-performance computing, and scientific data analysis, including projects involving time-series forecasting and exoplanet detection.</p>
+                <p>Beyond software development, I have experience in science communication and planetary science outreach through the Meteorite Education and Research Lab (MERL) at UT Dallas, where I educated students and members of the public about meteorites and planetary science.</p>
+                <p>I am seeking opportunities in software development, machine learning, and scientific computing, with a long-term interest in applying computational methods to problems in planetary science and astrophysics.</p>
+            </span>
+        </section>
+
+        <section class="block" id="education">
+            <h2>Education</h2>
+            <section class="entry">
+                <h3>The University of Texas at Dallas</h3>
+                <p class="entry-subheading">B.S. in Computer Science <br /> Collegium V Honors Program</p>
+                <p class="entry-date">August 2022 - May 2026</p>
+                <p>GPA: 3.67/4.0</p>
+            </section>
+        </section>
+
+        <section class="block" id="projects">
+            <h2>Projects</h2>
+            <section class="entry">
+                <h3>Exoplanet Detection from Kepler Light Curves</h3>
+                <p class="entry-date">April 2026 - May 2026</p>
+                <ul>
+                    <li>Developed training and evaluation pipeline in Python for a from-scratch 1D convolutional neural network (CNN) that classified 5,000+ Kepler stellar light curves using NumPy and scikit-learn.</li>
+                    <li>Wrote Slurm script to run heavy experiment on a high-performance computing (HPC) cluster.</li>
+                    <li>Authored detailed analysis of model’s ability to reliably identify exoplanets as part of an IEEE-format report, particularly focusing on how dataset imbalance affects results and including Matplotlib-generated confusion matrix and receiver operating characteristic (ROC) plots for the best model.</li>
+                </ul>
+            </section>
+            <section class="entry">
+                <h3>Southern California Wildfire Damage Assessment Dashboard</h3>
+                <p class="entry-date">January 2026 - May 2026</p>
+                <ul>
+                    <li>Contributed to a team-built wildfire damage assessment dashboard using React, FastAPI, Leaflet, and GPT-4o.</li>
+                    <li>Refactored map query handling into an extensible command framework and implemented damage-class filtering controls for geospatial visualization.</li>
+                    <li>Implemented structured LLM-generated command execution and location-aware dataset statistics queries, enabling natural-language map interaction and analysis.</li>
+                </ul>
+            </section>
+            <section class="entry">
+                <h3>Wave Height Prediction</h3>
+                <p class="entry-date">February 2026 - May 2026</p>
+                <ul>
+                    <li>Built Python deep learning / machine learning pipeline to evaluate long short-term memory (LSTM), gated recurrent unit (GRU), and temporal convolutional network (TCN) architectures for time-series wave-height forecasting.</li>
+                    <li>Developed pipeline components for dataset preprocessing, TensorFlow/Keras model training, experiment logging, and trial visualization using Matplotlib.</li>
+                    <li>Wrote Slurm scripts to run 18 parallel heavy experiments on a high-performance computing (HPC) cluster.</li>
+                    <li>Conducted comparative analysis of architecture performance with a focus on single-layer LSTM networks and authored an IEEE-format report evaluating architectural tradeoffs in time-series wave-height forecasting.</li>
+                </ul>
+            </section>
+            <section class="entry">
+                <h3>ImpactCRM</h3>
+                <p class="entry-date">September 2025 - December 2025</p>
+                <ul>
+                    <li>Built prototype customer relationship management (CRM) tool with a team in Nuxt for WalkWithMe.global, a humanitarian non-profit.</li>
+                    <li>Designed and implemented a TypeScript data-ingestion pipeline for legacy CRM exports, including CSV/XLSX parsing, schema mapping, and Prisma-based database insertion.</li>
+                    <li>Implemented user authentication with Better Auth.</li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="block" id="experience">
+            <h2>Work Experience</h2>
+            <section class="entry">
+                <h3>Lab Manager</h3>
+                <p class="entry-subheading">Meteorite Education and Research Lab at The University of Texas at Dallas</p>
+                <p class="entry-date">June 2024 - May 2026</p>
+                <ul>
+                    <li>Educated the public about meteorites by examining 50+ suspected meteorite samples from visitors, explaining the process of meteorite identification, and assisting in the successful identification of 2 genuine meteorite specimens.</li>
+                    <li>Conducted meteorite outreach activities for K-12 students, including 2 presentations at the Perot Museum of Nature and Science Discovery Camp program.</li>
+                    <li>Created and maintained <a href="https://labs.utdallas.edu/merl/">WordPress website</a> to provide information to visitors about the lab and meteoritics.</li>
+                    <li>Maintained internal documentation of appointments, meteorites identification procedures, and findings.</li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="block" id="publications">
+            <h2>Publications</h2>
+            <section class="entry">
+                <h3>The Meteorite Education and Research Lab at UT Dallas: A Unique Way of Teaching Undergraduates and the Public About Meteorites</h3>
+                <p class="entry-subheading">Lunar and Planetary Science Conference (LPSC), Houston, TX</p>
+                <p class="entry-date">March 13, 2025</p>
+                <p>Presented a poster (Abstract #2833) at the 56th LPSC about the Meteorite Education and Research Lab (MERL) at UT Dallas. MERL offers undergraduate meteoritics classes, curates an interactive meteorite collection, examines potential meteorites from members of the public, and teaches people about meteorites in a distinctive way.</p>
+            </section>
+        </section>
+
+        <section class="block" id="contact">
+            <h2>Contact Me</h2>
+            <ul>
+                <li><a href="https://github.com/AarejSyed">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/aarej-syed/">LinkedIn</a></li>
+            </ul>
+        </section>
+    </body>
+</html>

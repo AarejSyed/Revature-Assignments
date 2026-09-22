@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(245, 245, 220);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.block {
+    border-top: 5px solid rgb(180, 180, 150);
+}
+
+.entry {
+    border-top: 2px solid rgb(180, 180, 150);
+}
+
+.entry .entry-subheading {
+    font-weight: bold;
+}
+
+.entry .entry-date {
+    font-style: italic;
+}
