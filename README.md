@@ -4,5 +4,6 @@ This is a repository of assignments I completed as a trainee at Revature during 
   - PostgreSQL: Data queries (SELECT, UNION, JOIN), data manipulation (INSERT, UPDATE), data definition (CREATE), and common table expressions.
   - PL/pgSQL: Conditional control flow (IF/THEN/ELSE).
   - Database Objects: Functions and stored procedures.
+- `Week_5/`: HTML/CSS.
 
 Some files are coding challenges assigned by my trainer. Coding challenge files are formatted such that for each subchallenge, the file has a comment explaining the subchallenge, followed by my code answering the subchallenge.
