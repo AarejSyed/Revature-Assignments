@@ -1,5 +1,6 @@
 <!--
-Personal Portfolio Webpage Challenge: Create a website in HTML/CSS that acts as a resume / personal portfolio
+    - Personal Portfolio Webpage Challenge: Create a website in HTML/CSS that acts as a resume / personal portfolio
+    - JavaScript API Call Challenge: Add an API call to a webpage via JavaScript
 -->
 
 <!DOCTYPE html>
@@ -13,6 +14,8 @@ Personal Portfolio Webpage Challenge: Create a website in HTML/CSS that acts as 
         <title>Aarej Syed's Personal Portfolio</title>
     </head>
     <body>
+        <script src="script.js" defer></script>
+        
         <section class="block" id="header">
             <h1>Aarej Syed</h1>
         </section>
@@ -100,6 +103,14 @@ Personal Portfolio Webpage Challenge: Create a website in HTML/CSS that acts as 
                 <p class="entry-date">March 13, 2025</p>
                 <p>Presented a poster (Abstract #2833) at the 56th LPSC about the Meteorite Education and Research Lab (MERL) at UT Dallas. MERL offers undergraduate meteoritics classes, curates an interactive meteorite collection, examines potential meteorites from members of the public, and teaches people about meteorites in a distinctive way.</p>
             </section>
+        </section>
+
+        <!-- JavaScript API Call Challenge implementation -->
+        <section class="block" id="todays-neos">
+            <h2>Near-Earth Objects Making Their Closest Approach to Earth Today</h2>
+            <p>Near-Earth objects, or NEOs, are asteroids and comets whose orbits bring them near Earth. Space agencies like NASA track NEOs, particularly potentially hazardous objects (PHOs), as part of planetary defense.</p>
+            <p>Below are NEOs that are making their closest approaches to Earth today, courtesy of the <a href="https://api.nasa.gov/#asteroids-neows">Near Earth Object Web Service.</a></p>
+            <section id="todays-neos-list"><p class="entry loading-indicator" id="todays-neos-list-loading-indicator">Loading NEOs...</p></section>
         </section>
 
         <section class="block" id="contact">

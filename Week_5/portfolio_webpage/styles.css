@@ -18,3 +18,7 @@ body {
 .entry .entry-date {
     font-style: italic;
 }
+
+.loading-indicator {
+    color: grey;
+}
