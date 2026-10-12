@@ -18,6 +18,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.demo.student.domain.Student;
 import com.demo.student.service.StudentService;
 
+import com.demo.student.dto.StudentWriteDto;
+
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
@@ -36,12 +40,16 @@ public class StudentController {
     */
 
     @GetMapping
-    public List<Student> getAllStudents() {
-        return studentService.getAllStudents();
+    public List<Student> getAllStudents(
+        @RequestParam(defaultValue="0") int page,
+        @RequestParam(defaultValue="10") int count,
+        @RequestParam(defaultValue="true") boolean asc
+    ) {
+        return studentService.getAllStudents(page, count, asc);
     }
     
     @PostMapping
-    public ResponseEntity<Student> insertStudent(@Validated @RequestBody Student student) {
+    public ResponseEntity<Student> insertStudent(@Validated @RequestBody StudentWriteDto student) {
         Student savedStudent = studentService.insertStudent(student);
         
         // localhost:8080/api/students/{id}
@@ -78,7 +86,12 @@ public class StudentController {
     }
 
     @PutMapping("/{id}")
-    public Student updateStudent(@PathVariable int id, @RequestBody Student student) {
+    public Student updateStudent(@PathVariable int id, @Valid @RequestBody Student student) {
         return studentService.updateStudent(id, student);
     }
+
+    @GetMapping(params="school")
+    public List<Student> getStudentsBySchoolName(@RequestParam String school) {
+        return studentService.findStudentsBySchoolName(school);
+    }    
 }

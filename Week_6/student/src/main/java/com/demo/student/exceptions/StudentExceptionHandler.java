@@ -7,12 +7,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 @RestControllerAdvice
 public class StudentExceptionHandler {
-    @ExceptionHandler(StudentNotFoundException.class)
+    @ExceptionHandler(RecordNotFoundException.class)
     public ResponseEntity<StudentErrorResponse> handleStudentNotFoundException(
-        StudentNotFoundException e
+        RecordNotFoundException e
     ) {
         StudentErrorResponse error = new StudentErrorResponse(
             HttpStatus.NOT_FOUND.value(), 
@@ -49,6 +50,19 @@ public class StudentExceptionHandler {
         StudentErrorResponse error = new StudentErrorResponse(
             HttpStatus.BAD_REQUEST.value(),
             details,
+            System.currentTimeMillis()
+        );
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    }
+
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public ResponseEntity<StudentErrorResponse> handleMethodArgsException(
+        MethodArgumentTypeMismatchException e
+    ) {
+        StudentErrorResponse error = new StudentErrorResponse(
+            HttpStatus.BAD_REQUEST.value(),
+            "The ID provided was not valid. Please only provide an integer.",
             System.currentTimeMillis()
         );
 
